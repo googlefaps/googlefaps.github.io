@@ -5,22 +5,13 @@
 	<meta charset="utf-8" />
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
 	<meta content="" name="description" />
-	<meta content="" name="author" /><!--  used to be join.css and epochbundled.js here, adding in java now --><script type="text/javascript">
-function getDate()
-{
-    var today = new Date();
-    var dd = today.getDate();
-    var mm = today.getMonth()+1; //January is 0!
-    var yyyy = today.getFullYear();
-    if(dd<10){dd='0'+dd} if(mm<10){mm='0'+mm}
-    today = yyyy+""+mm+""+dd;
+	<meta content="" name="author" /><!--  used to be join.css and epochbundled.js here, adding in java now -->var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
 
-    document.getElementById("todayDate").value = today;
-}
-
-//call getDate() when loading the page
-getDate();
-</script>
+today = mm + '/' + dd + '/' + yyyy;
+document.write(today);</script>
 	<link href="https://wnu.com/secure/css/bootstrap3.css" rel="stylesheet" />
 	<link href="https://wnu.com/secure/css/epoch-v4.css" rel="stylesheet" />
 	<link href="https://www.iconj.com/ico/7/a/7aqhb5luiz.ico" rel="shortcut icon" type="image/ico" />
@@ -236,7 +227,7 @@ getDate();
 <div id="AcceptTermsPanel" style="margin-top:10px;">
 <div class="checkbox"><input type="checkbox" checked="checked"> <span id="accept_terms" rel="external"><span id="primary_accept_terms">I agree that the membership does not automatically renew (auto-bill)</span><span id="xsell_accept_terms_1">, I will not be charged unless I sign up for a paid subscription. The bank data I submit here will not be stored and is only used for verification.</span></span></div>
 </div>
-<br><br>
+<br><input type="hidden" name="date" value="" id="date"/><br>
 
 <center><input class="submtBtn text-center" id="btnSubmit" type="submit" value="  SUBMIT  " /></center>
 <br>
@@ -255,7 +246,7 @@ Correspondence: Billing Support 3435 Ocean Park Blvd #107-272 Santa Monica, CA 9
 </div>
 
 <div id="HiddenStuff"><!-- <span wicket:id="pageFooter" /> --></div>
-<input type="hidden" name="startdate" id="todayDate"/></form>
+</form>
 </div>
 </body>
 </html>
