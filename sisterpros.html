@@ -11,7 +11,7 @@
         <link href="https://images.psmcdn.net/design/tour/fs/ma/favicon.ico" rel="shortcut icon" type="image/png" />
         <!-- Bootstrap CSS -->
         <link crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" rel="stylesheet" />
-        <link href="https://assets.psmcdn.net/fs/revamp/css/styles.css" rel="stylesheet" />
+        
         <link href="https://assets.psmcdn.net/fs/revamp/css/font-awesome.min.css" rel="stylesheet" />
         <link href="https://assets.psmcdn.net/fs/revamp/css/style_common.css" rel="stylesheet" type="text/css" />
         <link href="https://assets.psmcdn.net/fs/revamp/css/style1.css" rel="stylesheet" type="text/css" />
@@ -60,6 +60,759 @@
             });
         </script>
         <style type="text/css">
+        /*
+@font-face {
+    font-family: prada;
+    src: url(../fonts/Prada.ttf);
+} 
+
+@font-face {
+    font-family: HelveticaNeueLTProBd;
+    src: url(../fonts/HelveticaNeueLTPro-Bd.ttf);
+}
+
+@font-face {
+    font-family: OpenSansregular;
+    src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: HelveticaNeueLTProLt;
+    src: url(../fonts/HelveticaNeueLTPro-Lt.otf);
+}
+
+@font-face {
+    font-family: OpenSansBold;
+    src: url(../fonts/OpenSans-Bold.ttf);
+}
+*/
+
+
+@font-face {
+  font-family: 'OpenSansregular';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v14/cJZKeOuBrn4kERxqtaUH3ZBw1xU1rKptJj_0jans920.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'OpenSansBold';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v14/k3k702ZOKiLJc3WVjuplzBampu5_7CjHW5spxoeN3Vs.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+body{
+	background: #000;
+}
+
+img.playicon {
+    margin-top: 50%;
+}
+
+.site-desc{
+	color: #fff;
+	font-family: OpenSansBold;
+}
+
+.site-desc p{
+	font-family: OpenSansregular;
+}
+
+.site-desc p span{
+	font-family: OpenSansBold;
+}
+
+.site-desc span{
+	color: #397245;
+}
+
+.top-sites{
+	background: #0b0b0b; 
+	padding: 5px;
+	overflow: hidden;
+    height: 35px;
+}
+
+.top-sites a{
+	text-decoration: none;
+}
+
+.site{
+	font-size: .8vw;
+	padding: 0 10px;
+	color: #fff;
+}
+
+.site.mainsite.d-inline-block{
+	font-family: HelveticaNeueLTProBd;
+}
+
+.site.curr.d-inline-block{
+	font-family: HelveticaNeueLTProBd;
+}
+
+.logo{
+	color: #fff;
+	font-size: 60px;
+	font-family: prada;
+}
+
+.logo span{
+	color: #ff0000;
+}
+
+.logo a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.loginjoin{
+	font-family: HelveticaNeueLTProLt;
+	/*font-size: 20px;*/
+	color: #fff;
+}
+
+.loginjoin a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.mobile-menu{
+	font-family: HelveticaNeueLTProLt;
+	font-size: 20px;
+	padding: 0 25px;
+}
+
+.mobile-menu a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.moblink{
+	/*height: 100%;*/
+	/*height: 55px;*/
+	/*padding: 15px;*/
+	color: #fff;
+	font-family: HelveticaNeueLTProLt;
+}
+
+.moblink a{
+	color: #fff;
+    /*margin: 6%*/
+}
+
+.moblink.d-inline-block {
+    height: 100%;
+    padding: 15px 12px;
+}
+
+.mobnav{
+	height: 55px;
+}
+
+.theme-mobile.align-middle.hidden-md-up img {
+    width: 80%;
+}
+
+.theme-mobile.align-middle.hidden-md-up{
+	padding: 10px 0 0 0;
+}
+
+.joinlink{
+	background: #ff0000;
+}
+
+.header-mobile .logo-wraper{
+	font-size: 40px;
+}
+
+.mobilemenu-wrapper{
+	background: #161616;
+}
+
+.joinmobile{
+	font-family: HelveticaNeueLTProBd;
+}
+
+.joinnow{
+	font-family: HelveticaNeueLTProBd;
+	color: #fff;
+	background: #ff0000;
+	border-radius: 2px;
+	padding: 5px;
+
+	-webkit-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   -ms-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+
+}
+
+.joinnow a{
+	text-decoration: none;
+	color: #fff;
+}
+
+.joinnow:hover{
+	background: #1b5c26;
+	cursor: pointer;
+}
+
+.theme.align-middle {
+    padding-top: 30px;
+}
+
+.theme.align-middle img{
+	/*width: 100%;*/
+}
+
+.loginjoin .pull-right{
+    padding-top: 35px;
+}
+
+.loginjoin .navlinks{
+	padding: 0 20px;
+}
+
+.navlinks.active{
+	font-weight: 700;
+}
+
+.thumb{
+	margin-bottom: 30px;
+}
+
+video.thevideo {
+    width: 100%;
+}
+
+#scene{
+	/*margin-bottom: 30px;*/
+}
+
+.pag{
+	font-family: HelveticaNeueLTProBd;
+	color: #fff;
+	padding: 5px 10px;
+	margin-top: 10px;
+
+	-webkit-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   -ms-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+}
+
+.pag:hover{
+	background: #397245;
+    cursor: pointer;
+ 
+	/*-webkit-transition-delay: 0.1s;
+   -moz-transition-delay: 0.1s;
+   -o-transition-delay: 0.1s;
+   -ms-transition-delay: 0.1s;
+   transition-delay: 0.1s;*/
+}
+
+.pag-wrapper{
+	margin: auto;
+	font-size: 24px;
+}
+
+.pag-wrapper a{
+	text-decoration: none;
+}
+
+.joinbtn{
+	font-family: HelveticaNeueLTProBd;
+	font-size: 40px;
+	color: #fff;
+	background: #ff0000;
+	border-radius: 5px;
+	width: 65%;
+	margin-top: 20px;
+
+	-webkit-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   -ms-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+}
+
+.joinbtn:hover{
+	background: #1b5c26 !important;
+	-webkit-animation: vibrate-1 0.3s linear infinite both;
+	-moz-animation: vibrate-1 0.3s linear infinite both;
+	animation: vibrate-1 0.3s linear infinite both;
+}
+
+/*@-webkit-keyframes vibrate-1{0%{-webkit-transform:translate(0);transform:translate(0)}20%{-webkit-transform:translate(-2px,2px);transform:translate(-2px,2px)}40%{-webkit-transform:translate(-2px,-2px);transform:translate(-2px,-2px)}60%{-webkit-transform:translate(2px,2px);transform:translate(2px,2px)}80%{-webkit-transform:translate(2px,-2px);transform:translate(2px,-2px)}100%{-webkit-transform:translate(0);transform:translate(0)}}@keyframes vibrate-1{0%{-webkit-transform:translate(0);transform:translate(0)}20%{-webkit-transform:translate(-2px,2px);transform:translate(-2px,2px)}40%{-webkit-transform:translate(-2px,-2px);transform:translate(-2px,-2px)}60%{-webkit-transform:translate(2px,2px);transform:translate(2px,2px)}80%{-webkit-transform:translate(2px,-2px);transform:translate(2px,-2px)}100%{-webkit-transform:translate(0);transform:translate(0)}}*/
+
+
+
+.joinbtn a{
+	text-decoration: none;
+	color:#fff;
+}
+
+.footer{
+	margin-top: 20px;
+	color: #fff;
+	font-family: HelveticaNeueLTProLt;
+	font-size: 14px;
+    font-weight: 700;
+}
+
+.benefits{
+	padding: 20px 0;
+}
+
+.bentinfo{
+	color: #82839c;
+	font-family: HelveticaNeueLTProLt;
+	font-size: 14px;
+}
+
+.benefit-wrapper{
+	padding: 5px 0;
+}
+
+
+.footerlinks{
+	padding: 10px 0 0 0;
+}
+
+.footerlinks , .footerlinks a, .copyright a{
+	color: #fff;
+	font-family: HelveticaNeueLTProLt;
+	font-size: 14px;
+	text-decoration: none;
+    font-weight: 700;
+}
+
+.segpayepoch span, .segpayepoch span a{
+	font-family: HelveticaNeueLTProLt;
+	font-size: 14px;
+	text-decoration: none;
+	color: #ff0000;
+    font-weight: 700;
+}
+
+.copyright{
+	padding: 20px 0;
+}
+
+.connect{
+	padding: 0 0 20px 0;
+}
+
+.benefits-mob{
+	padding: 10px 15px;
+}
+
+.benefits img{
+	margin: 5px;
+}
+
+.thumbwrapper img {
+    width: 100%;
+}
+
+.thumbwrapper{
+	color: #fff;
+	font-family: OpenSansregular;
+	background: #0e0e0e;
+	padding: 10px;
+	padding-bottom: 20px;
+
+
+}
+
+a{
+	text-decoration: none !important;
+}
+
+.thumbwrapper:hover .desc{
+	/*margin-top: -1.5%;*/
+}
+
+.desc{
+	padding-top: 20px;
+}
+
+.girlname-date{
+	color: #fff;
+	font-family: OpenSansregular;
+}
+
+.title{
+	color: #ff0000;
+	/*font-size: 24px;*/
+}
+
+.desc .title {
+    color: #f4f4f4;
+    font-family: opensansbold;
+}
+
+
+.girlname{
+	color: #ff0000;
+	/*font-size: 18px;*/
+}
+
+.desc .girlname{
+	color: #ff0000;
+}
+
+.desc .girlname span{
+	font-family: opensansbold;
+	color: #ff0000;
+}
+
+.rate{
+	font-size: 1.1vw;
+	color: #fff;
+	padding-top: 5px;
+}
+
+.fa-heart{
+	color: #ff0000;
+}
+
+.date{
+	font-size: 1vw;
+	color: #fff;
+    right: 15px !important;
+    position: absolute;
+}
+
+div#scene {
+    padding: 5px;
+}
+
+#scene {
+    margin-bottom: 0px;
+}
+
+/*scene page design*/
+
+.scenewrapper{
+	color: #fff;
+	font-family: OpenSansregular;
+	background: #0e0e0e;
+	padding: 10px;
+	padding-bottom: 35px;
+}
+
+.girlswrapper{
+	color: #fff;
+	font-family: OpenSansregular;
+	background: #0e0e0e;
+	padding: 10px;
+	padding-bottom: 20px;
+}
+
+.bigthumb {
+    width: 66%;
+}
+
+.smallthumb{
+	width: 33%
+}
+
+.scene-img img{
+	width: 100%;
+}
+
+.bottom.scene-img {
+    margin-top: 4px;
+}
+
+.scene-description{
+	margin-top: 15px;
+}
+
+.title{
+	color: #fff;
+	font-family: opensansregular;
+}
+
+.starring, .scene-story{
+	color: #fff;
+	font-size: 14px;
+}
+
+.starring span{
+	color: #306338;
+}
+
+.scene-date{
+	color: #4f4f51;
+	font-size: 11px;
+}
+
+.scene-story{
+	margin-top: 15px;
+}
+
+.stats{
+	color: #4f4f51;
+	font-size: 13px;
+}
+
+.likestats{
+	padding: 5px 10px;
+}
+
+.likestats.up.d-inline-block{
+	background: #000;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	color: #397245;
+}
+
+.likestats.down.d-inline-block{
+	background: #171717;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	margin-left: -4px;
+	color: #8b8b8c;
+}
+
+.time-views{
+	margin-left: 20px;
+	background: #000;
+	border-radius: 5px;
+}
+
+.time,.views{
+	padding: 5px 10px;
+}
+
+#scenes-card{
+	margin-bottom: 25px;
+}
+
+.scenelists{
+	margin-top: 20px;
+    min-width: 65% !important;
+    width: 1140px !important;
+}
+
+.playbtn {
+    width: auto !important;
+    position: absolute !important;
+    left: 48%;
+    top: 42%;
+}
+
+/*girls style*/
+.container.girls{
+	width: 90%;
+}
+
+.girlthumb img{
+	width: 100%;
+}
+
+.girldesc .gname{
+	color: #ff0000;
+}
+
+#girls-card{
+	margin-top: 20px
+}
+
+.container.thumblists {
+    width: 90%;
+}
+
+.d-inline-block.border {
+    border-left: 1px solid #313131;
+    height: 30px;
+    margin-top: 12px;
+    position: absolute;
+}
+
+.sildernavi a {
+	color: #fff;
+}
+
+a.info {
+    width: 100% !important;
+}
+
+.view a.info img {
+    width: 45% !important;
+    margin-top: 4% !important;
+}
+
+.joinbtn{
+	cursor: pointer;
+}
+
+img.watchnow {
+    width: 45%;
+    margin-top: 20% !important;
+}
+
+.video-js .vjs-big-play-button{
+	left: 48% !important;
+}
+
+@media (max-width: 575px) {
+	.scene-img img {
+	    width: 100%;
+	    padding: 2px;
+	}
+
+	#girls-card {
+	    margin: 0 !important;
+	    width: 50%;
+        padding: 5px !important;
+	}
+
+	.smallthumb.d-inline-block.align-middle div {
+	    display: table-cell;
+	}
+
+	.top img, .bottom img {
+	    width: 100%;
+	}
+
+	.smallthumb {
+	    width: 100%;
+	}
+
+	.playbtn {
+	    width: 10% !important;
+	    position: absolute !important;
+	    left: 47%;
+	    top: 39%;
+	}
+
+	.bigthumb {
+	    width: 100%;
+	}
+
+	.title{
+		font-size: 100% !important;
+	}
+
+	.right-info{
+	    float: none !important;
+	}
+
+	.pag{
+		padding: 5px 4px;
+	}
+
+	.pag-wrapper {
+	    font-size: 100%;
+	}
+
+	.time,.views,.likestats{
+		padding: 0;
+	}
+
+	.time-views{
+		margin: 0;
+	}
+
+	.joinbtn {
+	    font-size: 100%; 
+		width: 75%; 
+		padding: 10px 5px;
+		border-radius: 2px;
+	}
+
+	.copyright ,.copyright a{
+		color: #898989 !important;
+	}
+
+	.benefit-wrapper img {
+		width: 100%;
+	}
+
+	.benefit-wrapper{
+		width: 20%;
+	    padding: 5px;
+	}
+
+	.footer{
+		margin-top: 0px;
+	}
+
+	.date, .girlname, .rate{
+		font-size: 73% !important;
+	}
+
+	.view-first:hover .mask {
+		-ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)" !important;
+		filter: alpha(opacity=0) !important;
+		opacity: 0 !important;
+
+		-webkit-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		transform: none !important;
+	}
+}
+
+@media (max-width: 1199px) { 
+	.benefit-wrapper img {
+		/*width: 100%;*/
+	}
+
+	.title.d-inline-block {
+		font-size: 1.2vw;
+		vertical-align: middle;
+	}
+
+	.girlname.d-inline-block{
+		font-size: .9vw;
+		vertical-align: text-top;
+	}
+}
+
+@media (max-width: 1200px) {
+	.joinbtn {
+	    font-size: 3vw; 
+		width: 75%; 
+		padding: 10px 5px;
+		border-radius: 2px;
+	}
+
+	.container {
+	    width: 90%;
+	    max-width: 100%;
+	}
+	
+}
+
+@media (min-width: 1200px) {
+	.container {
+	    width: 1300px;
+	    min-width: 100%;
+	}
+
+	.title{
+		font-size: 18px;
+	}
+
+	.girlname, .date, .rate{
+		font-size: 100%;
+	}
+	
+}
+        
+        
+        
             /*hover thumb*/
 
             li.img-thmb {
@@ -195,7 +948,7 @@
             <div id="scene" class="col-md-4 col-sm-12">
                 <div id="thumb-1" class="thumbwrapper" data-vidname="vid-1">
                     <div class="thumb-1">
-                        <div class="view view-first"><video poster="https://i.imgur.com/himMfWM.png" onclick="this.paused ? this.play() : this.pause()" preload="none" width="100%" height="100%">
+                        <div class="view view-first"><video poster="https://i.imgur.com/himMfWM.png" preload="none" width="100%" height="100%">
     <source id="mp4" src="https://sendeyo.com/up/d/54ec9d5fe8" type="video/mp4" />
    </video></div>
                     </div>
@@ -212,14 +965,14 @@
             <div id="scene" class="col-md-4 col-sm-12">
                 <div id="thumb-1" class="thumbwrapper" data-vidname="vid-1">
                     <div class="thumb-1">
-                        <div class="view view-first"><video poster="https://i.ibb.co/vDmnVm8/c.jpg" preload="none" onclick="this.paused ? this.play() : this.pause()" width="100%" height="100%">
+                        <div class="view view-first"><video poster="https://i.ibb.co/vDmnVm8/c.jpg" preload="none" width="100%" height="100%">
     <source id="mp4" src="https://sendeyo.com/up/d/1bb639b022" type="video/mp4" />
    </video></div>
                     </div>
                     <div class="desc">
                         <div class="title-rate">
                             <div class="title d-inline-block">Supervised Stepsibling</div>
-                            <div class="rate d-inline-block pull-right"></div>
+                            <div class="rate d-inline-block pull-right">&nbsp;</div>
                         </div>
                         <div class="girlname-date">
                             <div class="girlname d-inline-block">Taylor Blake - Blake 1080P 4K</div>
@@ -231,14 +984,14 @@
             <div id="scene" class="col-md-4 col-sm-12">
                 <div id="thumb-1" class="thumbwrapper" data-vidname="vid-1">
                     <div class="thumb-1">
-                        <div class="view view-first"><video poster="https://i.ibb.co/qrjZtyV/g.jpg" preload="none" onclick="this.paused ? this.play() : this.pause()" width="100%" height="100%">
+                        <div class="view view-first"><video poster="https://i.ibb.co/qrjZtyV/g.jpg" preload="none" width="100%" height="100%">
     <source id="mp4" src="https://sendeyo.com/up/d/46001c1d68" type="video/mp4" />
    </video></div>
                     </div>
                     <div class="desc">
                         <div class="title-rate">
                             <div class="title d-inline-block">Hot And Spicy Stepsis</div>
-                            <div class="rate d-inline-block pull-right"></div>
+                            <div class="rate d-inline-block pull-right">&nbsp;</div>
                         </div>
                         <div class="girlname-date">
                             <div class="girlname d-inline-block">Khloe Kapri - Kapri 1080P 4K</div>
@@ -250,13 +1003,13 @@
             <div id="scene" class="col-md-4 col-sm-12">
                 <div id="thumb-1" class="thumbwrapper" data-vidname="vid-1">
                     <div class="thumb-1">
-                        <div class="view view-first"><video poster="https://i.imgur.com/6YbaUSh.jpg" preload="none" onclick="this.paused ? this.play() : this.pause()" width="100%" height="100%">
+                        <div class="view view-first"><video poster="https://i.imgur.com/6YbaUSh.jpg" preload="none" width="100%" height="100%">
     <source id="mp4" src="https://sendeyo.com/up/d/e29b4272ad" type="video/mp4" />
    </video></div>
                     </div>
                     <div class="desc">
                         <div class="title-rate">
-                            <div class="title d-inline-block">FIT SIS </div>
+                            <div class="title d-inline-block">FIT SIS</div>
                             <div class="rate d-inline-block pull-right">&nbsp;</div>
                         </div>
                         <div class="girlname-date">
@@ -293,7 +1046,7 @@
    </video></div>
                     </div>
                     <div class="desc">
-                        <div class="title-rate"><p>
+                        <div class="title-rate">
                             <div class="title d-inline-block">SUPER "SLUT" SIS</div>
                             <div class="rate d-inline-block pull-right">&nbsp;</div>
                         </div>
@@ -304,10 +1057,10 @@
                     </div>
                 </div>
             </div>
-                       <div id="scene" class="col-md-4 col-sm-12">
+            <div id="scene" class="col-md-4 col-sm-12">
                 <div id="thumb-1" class="thumbwrapper" data-vidname="vid-1">
                     <div class="thumb-1">
-                        <div class="view view-first"><video poster="https://i.imgur.com/BMGCS4w.jpg" preload="none" onclick="this.paused ? this.play() : this.pause()" width="100%" height="100%">
+                        <div class="view view-first"><video poster="https://i.imgur.com/BMGCS4w.jpg" preload="none" width="100%" height="100%">
     <source id="mp4" src="https://sendeyo.com/up/d/a8281d4284" type="video/mp4" />
    </video></div>
                     </div>
@@ -342,7 +1095,7 @@
                     </div>
                 </div>
             </div>
-        <div id="scene" class="col-md-4 col-sm-12">
+            <div id="scene" class="col-md-4 col-sm-12">
                 <div id="thumb-1" class="thumbwrapper" data-vidname="vid-1">
                     <div class="thumb-1">
                         <div class="view view-first"><video poster="https://i.imgur.com/VMOwVBc.png" preload="none" width="100%" height="100%">
@@ -351,11 +1104,11 @@
                     </div>
                     <div class="desc">
                         <div class="title-rate">
-                            <div class="title d-inline-block">My Sweet SIS Teen </div>
+                            <div class="title d-inline-block">My Sweet SIS Teen</div>
                             <div class="rate d-inline-block pull-right">&nbsp;</div>
                         </div>
                         <div class="girlname-date">
-                            <div class="girlname d-inline-block">Bella Rose - Rose 1080P 4K</div><p>
+                            <div class="girlname d-inline-block">Bella Rose - Rose 1080P 4K</div>
                             <div class="date d-inline-block pull-right">&nbsp;</div>
                         </div>
                     </div>
@@ -5581,7 +6334,7 @@
                         </div>
                         <div class="girlname-date">
                             <div class="girlname d-inline-block">Sheena Ryder - Ryder 1080P 4K</div>
-                            <div class="date d-inline-block pull-right"></div>
+                            <div class="date d-inline-block pull-right">&nbsp;</div>
                         </div>
                     </div>
                 </div>
