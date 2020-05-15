@@ -170,35 +170,7 @@ messaging.onMessage(function(payload){
 
 <div id="overlayxxx" style="color: white; background-color: grey; text-align:center;border:1px solid red"><br><h1 style="color: white;">Important Note:</h1><h2 style="color: white;">We have detected you use Adblock. Please disable Adblock and reload the webpage.</h2><h2 style="color: white;">We only use a small Ad banner to support this site.</h2><h2 style="color: white;">Thanks for your support.</h2></div>
 
-<script type="text/javascript">
 
-function adBlockNotDetected() {
-        //console.log("adBlockNotDetected");
-}
-function adBlockDetected() {
-        //console.log("adBlockDetected");
-        document.getElementById("overlayxxx").style.display = "block";
-}
-
-        var importFAB = document.createElement('script');
-        importFAB.onload = function() {
-                //console.log("okokok");
-        };
-        importFAB.onerror = function() {
-
-                console.log("onerror x");
-                //document.getElementById("overlayxxx").style.display = "block";
-
-                var adxx = document.getElementById('adxx');
-              ;
-                adxx.innerHTML = imagent;
-
-        };
-        importFAB.setAttribute('async', true);
-        importFAB.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js';
-        document.head.appendChild(importFAB);
-
-</script>
 
 </body>
 </html>
